@@ -81,10 +81,12 @@ vagrant ssh
 
 至此，`homestead` 以及 `host` 配置完毕。
 
-###
+### 访问
 
 访问： [http://voyager.test/admin](http://voyager.test/admin)  
 账号： `lichking_lin86@qq.com`    
 密码： `111111`
 
 账号密码是在最后一个迁移文件中，创建的。
+
+### 截图
