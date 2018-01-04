@@ -1,4 +1,4 @@
-### 介绍
+## 介绍
 
 `Voyager` 以优雅和专业的界面脱颖而出，但主要的一点是，它只是工作。清楚的使用说明，友好的前端主题，没有明显的错误或未完成的部分，这就是 Voyager。使用像船长的照片或轮船的图标，使整体看起来不错。
 
@@ -11,7 +11,7 @@
 > Voyager 官方网站： [https://laravelvoyager.com/](https://laravelvoyager.com/)  
 > voyager github: [https://github.com/the-control-group/voyager](https://github.com/the-control-group/voyager)
 
-### 安装步骤
+## 安装步骤
 
 先从 `github` 上拉下代码，并安装环境
 
@@ -81,7 +81,7 @@ vagrant ssh
 
 至此，`homestead` 以及 `host` 配置完毕。
 
-### 访问
+## 访问
 
 访问： [http://voyager.test/admin](http://voyager.test/admin)  
 账号： `lichking_lin86@qq.com`    
@@ -89,12 +89,12 @@ vagrant ssh
 
 账号密码是在最后一个迁移文件中，创建的。
 
-### 截图
+## 截图
 
 ![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/AsvsLLosKf.png?v=1)
 
 ![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/afjMA3LrCg.png?v=1)
 
-## 另外一款简介的后台管理工具
+## 另外一款简介的后台管理面板
 
 [https://demo.getcraftable.com/](https://demo.getcraftable.com/)
