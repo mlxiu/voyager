@@ -94,3 +94,7 @@ vagrant ssh
 ![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/AsvsLLosKf.png?v=1)
 
 ![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/afjMA3LrCg.png?v=1)
+
+## 另外一款简介的后台管理工具
+
+[https://demo.getcraftable.com/](https://demo.getcraftable.com/)
