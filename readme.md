@@ -90,3 +90,8 @@ vagrant ssh
 账号密码是在最后一个迁移文件中，创建的。
 
 ### 截图
+
+![file](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/AsvsLLosKf.png)
+
+![file](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/afjMA3LrCg.png)
+
