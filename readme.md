@@ -1,58 +1,90 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+### 介绍
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+`Voyager` 以优雅和专业的界面脱颖而出，但主要的一点是，它只是工作。清楚的使用说明，友好的前端主题，没有明显的错误或未完成的部分，这就是 Voyager。使用像船长的照片或轮船的图标，使整体看起来不错。
 
-## About Laravel
+另一个明智的决定是在安装过程中有一个参数 **“dummy-data”** 你可以让你的管理面板预先填写条目来玩。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+`Voyager` 还有一个文件管理系统来管理所有你上传的文件，这真的很方便，并有助于在其他管理面板建设者中脱颖而出。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+最后，在 `Voyager` 的帮助下，您还可以直接从管理面板更改数据库表格，这是您的后端应用程序中的一种迷你。
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+> Voyager 官方网站： [https://laravelvoyager.com/](https://laravelvoyager.com/)
+> voyager github: [https://github.com/the-control-group/voyager](https://github.com/the-control-group/voyager)
 
-## Learning Laravel
+### 安装步骤
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+先从 `github` 上拉下代码，并安装环境
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+```
+git clone https://github.com/mlxiu/voyager.git
 
-## Laravel Sponsors
+cd voyager
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+修改配置
 
-## Contributing
+```
+cp .env.example .env
+vi .env
+# 将数据库以及host配置如下（用的是 homestead 环境）
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+APP_URL=http://voyager.test
 
-## Security Vulnerabilities
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=voyager
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+生成key
 
-## License
+```
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+至此，整个安装完成。
+
+### homestead配置以及本地host配置
+
+在 `Homestead.yaml` 中添加映射以及数据库配置
+
+```
+cd ~/Homestead
+vi Homestead.yaml
+
+# 开始配置
+  -map: voyager.test
+   to:  /home/vagrant/Code/voyager/public
+
+databases:
+   ……
+   - voyager
+
+:wq
+
+# 使得配置生效并重载（使用vagrant管理）
+vagrant provision
+vagrant reload
+vagrant up
+vagrant ssh
+```
+
+在本地 `hosts` 中添加一条记录
+
+```
+192.168.10.10 voyager.test
+```
+
+至此，`homestead` 以及 `host` 配置完毕。
+
+###
+
+访问： [http://voyager.test/admin](http://voyager.test/admin)
+账号： `lichking_lin86@qq.com`  
+密码： `111111`
+
+账号密码是在最后一个迁移文件中，创建的。
