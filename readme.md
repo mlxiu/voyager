@@ -91,6 +91,6 @@ vagrant ssh
 
 ### 截图
 
-![file](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/AsvsLLosKf.png)
+![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/AsvsLLosKf.png)
 
-![file](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/afjMA3LrCg.png)
+![image](https://dn-phphub.qbox.me/uploads/images/201801/04/15778/afjMA3LrCg.png)
