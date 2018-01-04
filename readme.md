@@ -8,7 +8,7 @@
 
 最后，在 `Voyager` 的帮助下，您还可以直接从管理面板更改数据库表格，这是您的后端应用程序中的一种迷你。
 
-> Voyager 官方网站： [https://laravelvoyager.com/](https://laravelvoyager.com/)
+> Voyager 官方网站： [https://laravelvoyager.com/](https://laravelvoyager.com/)  
 > voyager github: [https://github.com/the-control-group/voyager](https://github.com/the-control-group/voyager)
 
 ### 安装步骤
@@ -83,8 +83,8 @@ vagrant ssh
 
 ###
 
-访问： [http://voyager.test/admin](http://voyager.test/admin)
-账号： `lichking_lin86@qq.com`  
+访问： [http://voyager.test/admin](http://voyager.test/admin)  
+账号： `lichking_lin86@qq.com`    
 密码： `111111`
 
 账号密码是在最后一个迁移文件中，创建的。
